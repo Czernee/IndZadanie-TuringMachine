@@ -29,17 +29,17 @@ typedef struct Machine
 void init(Machine* ptr1)
     {
     ifstream fin("input.txt");
-    int l1;
-    fin >> l1;
-    for (int i = 0; i < l1; i++)
+    int cnt;
+    fin >> cnt;
+    for (int i = 0; i < cnt; i++)
         {
         for (int j = 0; j <= 6; j++)
             {
-            char per, f1, f2; int f3;
-            fin >> per >> f1 >> f2 >> f3;
-            ptr1[i].shift[per] = f1;
-            ptr1[i].record[per] = f2;
-            ptr1[i].change[per] = f3;
+            char input, side, put; int next_condition;
+            fin >> input >> side >> put >> next_condition;
+            ptr1[i].shift[input] = side;
+            ptr1[i].record[input] = put;
+            ptr1[i].change[input] = next_condition;
             }
         }
     }
