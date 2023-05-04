@@ -46,16 +46,16 @@ void init(Machine* ptr1)
 
 void transition(Tape* ptr, Machine* ptr1)
     {
-    char t = ptr->tape[ptr->head];
+    char c = ptr->tape[ptr->head];
     Machine& currentRecord = ptr1[condition];
 
-    condition = currentRecord.change[t]; 
+    condition = currentRecord.change[c]; 
 
-    if (currentRecord.record[t] != 'O')
+    if (currentRecord.record[c] != 'O')
         {
-        ptr->tape[ptr->head] = currentRecord.record[t];
+        ptr->tape[ptr->head] = currentRecord.record[c];
         }
-    if (currentRecord.shift[t] == 'R')
+    if (currentRecord.shift[c] == 'R')
         {
         ptr->head++;
         }
@@ -95,7 +95,7 @@ int main()
     ptrTape->head = 1;
     init(ptrMachine);
     char choice;
-    bool flag = false;
+    bool valid = false;
     do
         {
         cout << "Введите входную строку: " << endl;
@@ -103,13 +103,13 @@ int main()
         ptrTape->tape.push_back('_');
         string input;
         cin >> input;
-        flag = isValidInput(input);
+        valid = isValidInput(input);
 
-        if (flag)
+        if (valid)
             {
             cout << "Текущее состояние: " << condition << endl;
 
-            for (int i = 0; i < input.size(); i++)
+            for (int i = 0; i < input.size(); i++) 
                 ptrTape->tape.push_back(input[i]);
             ptrTape->tape.push_back('_');
 
