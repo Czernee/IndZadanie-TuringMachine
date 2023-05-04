@@ -1,0 +1,17 @@
+16
+1 O O -1 # O O -1 = O O -1 0 O O -1 b O O -1 _ O O -1 a O O -1
+1 L O 1 # O O -1 = O O -1 0 L O 1 b O O -1 _ R = 2 a O O -1
+1 R O 2 # L O 3 = O O -1 0 R O 2 b L O 2 _ O O -1 a L O 2
+1 L a 5 # L O 9 = L O 8 0 L b 4 b L O 3 _ L a 3 a L O 3
+1 L O 4 # L O 4 = L O 4 0 L O 4 b L O 4 _ R 0 6 a L O 4
+1 L O 5 # L O 5 = L O 5 0 L O 5 b L O 5 _ R 1 6 a L O 5
+1 R O 6 # R O 7 = R O 6 0 R O 6 b L O 3 _ O O -1 a L O 3
+1 R O 7 # R O 7 = R O 7 0 R O 7 b R O 7 _ L O 3 a R O 7
+1 L O 8 # O O -1 = O O -1 0 L O 8 b O O -1 _ R # 7 a O O -1
+1 L 0 10 # O O -1 = L O 9 0 L 1 9 b L O 9 _ O O -1 a L O 9
+1 L O 10 # L O 9 = O O -1 0 L O 10 b O O -1 _ R O 11 a O O -1
+1 R O 12 # R _ 13 = O O -1 0 R _ 11 b O O -1 _ O O -1 a O O -1
+1 R O 12 # R O 12 = L O 9 0 R O 12 b O O -1 _ O O -1 a O O -1
+1 R O 14 # O O -1 = L O 13 0 R _ 13 b O O -1 _ R 0 14 a O O -1
+1 R O 14 # R O 14 = R O 14 0 R O 14 b R 0 14 _ L O 15 a R 1 14
+1 L O 15 # l O 15 = L O 15 0 L O 15 b O O -1 _ R O 0 a O O -1
