@@ -109,16 +109,22 @@ int main()
             {
             cout << "Текущее состояние: " << condition << endl;
 
-            for (int i = 0; i < input.size(); i++) 
+            for (int i = 0; i < input.size(); i++)
+                {
                 ptrTape->tape.push_back(input[i]);
+                }
             ptrTape->tape.push_back('_');
 
             for (int i = 0; i < ptrTape->tape.size(); i++)
+                {
                 cout << ptrTape->tape[i];
+                }
             cout << endl;
 
             for (int i = 0; i < ptrTape->head; i++)
+                {
                 cout << ' ';
+                }
             cout << "^" << endl;
 
             int dist;
@@ -132,9 +138,13 @@ int main()
                 for (int i = 0; i < ptrTape->tape.size() - 1; i++)
                     {
                     if (ptrTape->tape[i] != '_' || ptrTape->tape[i + 1] != '_')
+                        {
                         cout << ptrTape->tape[i];
+                        }
                     else
+                        {
                         dist++;
+                        }
                     }
                 if (ptrTape->tape.back() != '_')
                     {
